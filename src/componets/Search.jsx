@@ -25,7 +25,7 @@ const Search = ({ getWeatherInfo }) => {
   }, []);
   return (
     <>
-      <h2 className='search__Container'>
+      <h2 className="search__Container">
         <input
           type="text"
           placeholder="Escribe tu ciudad o comparte tu ubicación"

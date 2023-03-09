@@ -28,15 +28,15 @@ const App = () => {
   }, []);
   const getBackground = () => {
     if (weatherInfo) {
-      if (weatherInfo.weather[0].main.includes('clear')) {
+      if (weatherInfo.weather[0].main.includes('Clear')) {
         return 'radial-gradient(50% 50% at 50% 50%, pink 0%, yellow 100%)';
-      } else if (weatherInfo.weather[0].main.includes('clouds')) {
+      } else if (weatherInfo.weather[0].main.includes('Clouds')) {
         return 'radial-gradient(50% 50% at 50% 50%, gray 0%, skyblue 100%)';
-      } else if (weatherInfo.weather[0].main.includes('rain')) {
+      } else if (weatherInfo.weather[0].main.includes('Rain')) {
         return 'radial-gradient(50% 50% at 50% 50%, gray 0%, cornflowerblue 100%)';
-      } else if (weatherInfo.weather[0].main.includes('thunderstorm')) {
+      } else if (weatherInfo.weather[0].main.includes('Thunderstorm')) {
         return 'radial-gradient(50% 50% at 50% 50%, gray 0%, rebeccapurple 100%)';
-      } else if (weatherInfo.weather[0].main.includes('snow')) {
+      } else if (weatherInfo.weather[0].main.includes('Snow')) {
         return 'radial-gradient(50% 50% at 50% 50%, gray 0%, white 100%)';
       }
     }
