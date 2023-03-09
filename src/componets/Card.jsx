@@ -39,12 +39,20 @@ const Card = ({ weatherInfo, coordinates }) => {
             src={`http://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@2x.png`}
           />
           <span>
-            <i class="fa-solid fa-temperature-full"></i> {temp}°
+            <i class="fa-solid fa-temperature-full"></i> {temp}
+            {isCelsius ? '°C' : '°F'}
           </span>
           <br />
-          <button onClick={() => setIsCelsius(!isCelsius)}>
-            {isCelsius ? '°C | °F' : '°F | °C'}
-          </button>
+          <div className="temp__Weather">
+            <button onClick={() => setIsCelsius(!isCelsius)}>
+              {isCelsius ? (
+                <i class="fa-solid fa-toggle-off"></i>
+              ) : (
+                <i class="fa-solid fa-toggle-on"></i>
+              )}
+            </button>
+            <span>{isCelsius ? '°F' : '°C'}</span>
+          </div>
         </div>
       </div>
 

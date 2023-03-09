@@ -1,9 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*,
-*::before,
-*:after {
+body{
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
@@ -101,19 +99,25 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.right button {
-  border-radius: 40px;
-  border: 1px solid #000000;
-  background: transparent;
-  padding-left: 15px;
-  padding-right: 15px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
+.temp__Weather{
+  display: flex;
+}
+.temp__Weather i{
+  font-size: 35px;
+}
+.temp__Weather span{
+  font-size: 25px;
+}
+.forecast{
+  margin: 0; 
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  justify-content: space-between
 }
 .forecast__Container {
   width: 100%;
+  font-size: 16px;
 }
 .forecast__Container > h2 {
   padding: 10px;
@@ -125,7 +129,7 @@
 }
 .temp__Container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .temp {
   display: flex;
@@ -137,11 +141,7 @@
   align-items: center;
   border-left: 1px solid #000000;
 }
-.forecast {
-  display: flex;
-  align-items: center;
-  padding-top: 10px;
-}
+ 
 .button__Forecast {
   display: flex;
   justify-content: space-between;

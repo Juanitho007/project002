@@ -35,22 +35,28 @@ const Forecast = ({ coordinates }) => {
       <div className="forecast__Container">
         <div className="forecast">
           <div className="left__Forecast">
-            <h2>{forecast[actualCard].dt_txt}</h2>
+            <h2>
+              Fecha:{' '}
+              {forecast[actualCard].dt_txt.split(' ')[0].split('-').reverse().join('/')}
+            </h2>
+            <h2>
+              Hora:{' '}
+              {forecast[actualCard].dt_txt.split(' ')[1].split(':').slice(0, 2).join(':')}{' '}
+              hrs
+            </h2>
             <p>
-              Condiciones del cielo:{' '}
+              Condición del cielo:{' '}
               {forecast[actualCard].weather[0].description.charAt(0).toUpperCase() +
                 forecast[actualCard].weather[0].description.slice(1)}
             </p>
-
             <p>Humedad: {forecast[actualCard].main.humidity}%</p>
             <p className="temp__Container">
-              Temperatura{' '}
-              <div className="temp">
-                <span>Max</span>
+              <div className="">
+                <span>Temp. Max </span>
                 <span>{forecast[actualCard].main.temp_max} °C</span>
               </div>
-              <div className="temp">
-                <span>Min</span>
+              <div className="">
+                <span>Temp. Min </span>
                 <span>{forecast[actualCard].main.temp_min} °C</span>
               </div>
             </p>
